@@ -1,0 +1,20 @@
+This file explicitly defines the build process for Netlify
+
+[build]
+
+The command to run during the build process
+
+command = "npm run build"
+
+The directory to publish after the build is complete (where React puts the files)
+
+publish = "build"
+
+Essential redirect rule for Single Page Applications (SPAs)
+
+This sends all non-existent paths back to index.html, letting React handle routing.
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
